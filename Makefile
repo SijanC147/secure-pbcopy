@@ -16,9 +16,8 @@ secure-pbcopy: main.m
 INSTALL = install
 INSTALL_PROGRAM = $(INSTALL)
 
-prefix = /usr/local
-exec_prefix = $(prefix)
-bindir = $(exec_prefix)/bin
+PREFIX ?= /usr/local
+bindir = $(PREFIX)/bin
 
 install: secure-pbcopy
 	$(INSTALL) -d $(DESTDIR)$(bindir)
